@@ -2,6 +2,8 @@
 #include "dispatch.h"
 #include <wdmguid.h>
 
+#define KBDCLASS_NAME (L"\\Driver\\kbdclass")
+
 DRIVER_INITIALIZE mydrvEntry;
 DRIVER_UNLOAD mydrvUnload;
 DRIVER_NOTIFICATION_CALLBACK_ROUTINE keyboardAddedOrRemoved;
@@ -400,6 +402,7 @@ void mydrvUnload(IN PDRIVER_OBJECT pDriverObject){
 
 NTSTATUS mydrvEntry(PDRIVER_OBJECT pDrvObj, PUNICODE_STRING pRegPath){
 	UNREFERENCED_PARAMETER(pRegPath);
+	UNICODE_STRING uKbdClassDrv;
 	NTSTATUS status = STATUS_UNSUCCESSFUL;
 
 	DbgPrint("Keyboard Filter Driver - DriverEntry\nCompiled at " __TIME__ " on " __DATE__ "\n");
@@ -433,6 +436,14 @@ NTSTATUS mydrvEntry(PDRIVER_OBJECT pDrvObj, PUNICODE_STRING pRegPath){
 	if (status)
 		return status;
 
+	RtlInitUnicodeString(&uKbdClassDrv, KBDCLASS_NAME);
+
+	status = ObReferenceObjectByName(&uKbdClassDrv, OBJ_KERNEL_HANDLE | OBJ_CASE_INSENSITIVE, NULL, 0, IoDriverObjectType, KernelMode, NULL, &((PKBDFNFLT_DEVICE_EXTENSION)pKbdFnFltDevice->DeviceExtension)->pKbdClassDrv);
+	if (status){
+		IoDeleteDevice(pKbdFnFltDevice);
+		return status;
+	}
+
 	GUID kbdDevClass = GUID_CLASS_KEYBOARD;
 	PIO_WORKITEM pWorkitem = (PIO_WORKITEM)&((PKBDFNFLT_DEVICE_EXTENSION)pKbdFnFltDevice->DeviceExtension)->workitem;
 
@@ -440,7 +451,8 @@ NTSTATUS mydrvEntry(PDRIVER_OBJECT pDrvObj, PUNICODE_STRING pRegPath){
 	((PKBDFNFLT_DEVICE_EXTENSION)pKbdFnFltDevice->DeviceExtension)->pWorkitem = pWorkitem;
 	//PIO_WORKITEM pWorkitem = ExAllocatePoolWithTag(NonPagedPool, IoSizeofWorkItem(), g_poolTag);
 	//if (!pWorkitem){
-	//	
+	//
+	
 	//}
 	DbgPrint("%p", &((PKBDFNFLT_DEVICE_EXTENSION)pKbdFnFltDevice->DeviceExtension)->pKeyboardDevice);
 	DbgPrint("%p", &((PKBDFNFLT_DEVICE_EXTENSION)pKbdFnFltDevice->DeviceExtension)->pKbdClassDrv);

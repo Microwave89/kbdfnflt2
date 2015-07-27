@@ -1,8 +1,8 @@
-﻿Build started 27.07.2015 15:13:37.
+﻿Build started 27.07.2015 16:19:22.
      1>Project "E:\Users\MicrowaveStd\Documents\Visual Studio 2013\Projects\km\kbdfnflt2\kbdfnflt2\kbdfnflt2.vcxproj" on node 2 (Rebuild target(s)).
      1>StampInf:
          E:\Program Files (x86)\Windows Kits\8.1\bin\x86\stampinf.exe -d "*" -a "amd64" -v "*" -k "1.11" -u "1.11.0" -f x64\Win7Release\includetest.inf 
-         Stamping x64\Win7Release\includetest.inf [Version] section with DriverVer=07/27/2015,15.13.37.783
+         Stamping x64\Win7Release\includetest.inf [Version] section with DriverVer=07/27/2015,16.19.22.944
        ClCompile:
          E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /Ix64\Win7Release\ /nologo /W4 /WX /O1 /Ob0 /Os /Oy /GL /D CODE_ANALYSIS /D _WIN64 /D _AMD64_ /D AMD64 /D _WIN32_WINNT=0x0601 /D WINVER=0x0601 /D WINNT=1 /D NTDDI_VERSION=0x06010000 /D _UNICODE /D UNICODE /GF /Gm- /Zp8 /GS- /Gy /fp:fast /fp:except- /Zc:wchar_t- /Zc:forScope- /GR- /Fo"x64\Win7Release\\" /Fd"x64\Win7Release\vc120.pdb" /Gz /TC /wd4603 /wd4627 /wd4986 /wd4987 /wd4996 /FI"E:\Program Files (x86)\Windows Kits\8.1\Include\Shared\warning.h" /analyze /analyze:stacksize1024 /analyze:plugin"E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\\bin\localespc.dll" /analyze:plugin"E:\Program Files (x86)\Windows Kits\8.1\bin\x86\WindowsPrefast.dll" /analyze:plugin"E:\Program Files (x86)\Windows Kits\8.1\bin\x86\drivers.dll" /Zl /errorReport:prompt /kernel -cbstring -d2epilogunwind /d1import_no_registry /d2AllowCompatibleILVersions /d2Zi+   /analyze:quiet dispatch.c main.c
          dispatch.c
@@ -19,10 +19,10 @@
          Done Adding Additional Store
          Successfully signed: E:\Users\MicrowaveStd\Documents\Visual Studio 2013\Projects\km\kbdfnflt2\x64\Win7Release\kbdfnflt2.sys
          
-     1>e:\users\microwavestd\documents\visual studio 2013\projects\km\kbdfnflt2\kbdfnflt2\main.c(261): warning C6102: Using 'maxTargetNameLength' from failed function call at line '254'.
-     1>e:\users\microwavestd\documents\visual studio 2013\projects\km\kbdfnflt2\kbdfnflt2\main.c(437): warning C6102: Using '*pKbdFnFltDevice' from failed function call at line '431'.
+     1>e:\users\microwavestd\documents\visual studio 2013\projects\km\kbdfnflt2\kbdfnflt2\main.c(263): warning C6102: Using 'maxTargetNameLength' from failed function call at line '256'.
+     1>e:\users\microwavestd\documents\visual studio 2013\projects\km\kbdfnflt2\kbdfnflt2\main.c(443): warning C6102: Using '*pKbdFnFltDevice' from failed function call at line '434'.
      1>Done Building Project "E:\Users\MicrowaveStd\Documents\Visual Studio 2013\Projects\km\kbdfnflt2\kbdfnflt2\kbdfnflt2.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:15.47
+Time Elapsed 00:00:15.02
