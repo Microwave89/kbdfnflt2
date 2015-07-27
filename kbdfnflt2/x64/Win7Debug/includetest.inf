@@ -1,0 +1,32 @@
+;
+; includetest.inf
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=
+ClassGuid=
+Provider=
+DriverVer=07/21/2015,19.14.16.81
+CatalogFile=
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+
+
+[Manufacturer]
+%ManufacturerName%=Standard,NTamd64
+
+[Standard.NTamd64]
+
+
+[Strings]
+ManufacturerName=""
+ClassName=""
+DiskName="includetest Source Disk"

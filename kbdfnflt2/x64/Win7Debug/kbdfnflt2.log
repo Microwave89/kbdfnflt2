@@ -1,0 +1,17 @@
+﻿Build started 21.07.2015 19:14:15.
+     1>Project "E:\Users\MicrowaveStd\Documents\Visual Studio 2013\Projects\km\kbdfnflt2\kbdfnflt2\kbdfnflt2.vcxproj" on node 2 (Rebuild target(s)).
+     1>StampInf:
+         E:\Program Files (x86)\Windows Kits\8.1\bin\x86\stampinf.exe -d "*" -a "amd64" -v "*" -k "1.11" -u "1.11.0" -f x64\Win7Debug\includetest.inf 
+         Stamping x64\Win7Debug\includetest.inf [Version] section with DriverVer=07/21/2015,19.14.16.81
+       ClCompile:
+         E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /Ix64\Win7Debug\ /Zi /nologo /W4 /WX /Od /Oi /Oy- /D _WIN64 /D _AMD64_ /D AMD64 /D DEPRECATE_DDK_FUNCTIONS=1 /D MSC_NOOPT /D _WIN32_WINNT=0x0601 /D WINVER=0x0601 /D WINNT=1 /D NTDDI_VERSION=0x06010000 /D DBG=1 /D _UNICODE /D UNICODE /GF /Gm- /Zp8 /GS /Gy /fp:precise /Zc:wchar_t- /Zc:forScope- /GR- /Fo"x64\Win7Debug\\" /Fd"x64\Win7Debug\vc120.pdb" /Gz /TC /wd4748 /wd4603 /wd4627 /wd4986 /wd4987 /wd4996 /FI"E:\Program Files (x86)\Windows Kits\8.1\Include\Shared\warning.h" /errorReport:prompt /kernel -cbstring -d2epilogunwind /d1import_no_registry /d2AllowCompatibleILVersions /d2Zi+ main.c
+         main.c
+       Link:
+         E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Users\MicrowaveStd\Documents\Visual Studio 2013\Projects\km\kbdfnflt2\x64\Win7Debug\kbdfnflt2.sys" /VERSION:"6.3" /INCREMENTAL:NO /NOLOGO /WX /SECTION:"INIT,d" "E:\Program Files (x86)\Windows Kits\8.1\lib\win7\KM\x64\BufferOverflowK.lib" "E:\Program Files (x86)\Windows Kits\8.1\lib\win7\KM\x64\ntoskrnl.lib" "E:\Program Files (x86)\Windows Kits\8.1\lib\win7\KM\x64\hal.lib" "E:\Program Files (x86)\Windows Kits\8.1\lib\win7\KM\x64\wmilib.lib" /NODEFAULTLIB /MANIFEST:NO /DEBUG /PDB:"E:\Users\MicrowaveStd\Documents\Visual Studio 2013\Projects\km\kbdfnflt2\x64\Win7Debug\kbdfnflt2.pdb" /SUBSYSTEM:NATIVE,"6.01" /Driver /OPT:REF /OPT:ICF /ENTRY:"GsDriverEntry" /RELEASE /IMPLIB:"E:\Users\MicrowaveStd\Documents\Visual Studio 2013\Projects\km\kbdfnflt2\x64\Win7Debug\kbdfnflt2.lib" /MERGE:"_TEXT=.text;_PAGE=PAGE" /MACHINE:X64 /PROFILE /kernel /IGNORE:4198,4010,4037,4039,4065,4070,4078,4087,4089,4221,4108,4088,4218,4218,4235 /osversion:6.3 /pdbcompress /debugtype:pdata x64\Win7Debug\main.obj
+     1>BufferOverflowK.lib(gs_support.obj) : error LNK2019: unresolved external symbol DriverEntry referenced in function GsDriverEntry
+     1>E:\Users\MicrowaveStd\Documents\Visual Studio 2013\Projects\km\kbdfnflt2\x64\Win7Debug\kbdfnflt2.sys : fatal error LNK1120: 1 unresolved externals
+     1>Done Building Project "E:\Users\MicrowaveStd\Documents\Visual Studio 2013\Projects\km\kbdfnflt2\kbdfnflt2\kbdfnflt2.vcxproj" (Rebuild target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.20
